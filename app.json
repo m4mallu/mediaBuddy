@@ -1,0 +1,24 @@
+{
+  "name": "mediaBuddy",
+  "description": "Inline media searching robot without database. Create your Fork now.",
+  "keywords": ["telegram", "best", "inline", "media", "searching", "robot"],
+  "logo": "https://telegra.ph/file/4b56f21066ee8183ae5c8.png",
+  "website": "https://github.com/m4mallu/mediaBuddy",
+  "repository": "https://github.com/m4mallu/mediaBuddy",
+  "env": {
+        "APP_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
+        "API_HASH": {"description": "Get this value from https://my.telegram.org" , "required": true},
+        "TG_BOT_TOKEN": {"description": "Get Bot Token From BotFather Bot","required": true},
+        "TG_USER_SESSION": {"description": "User String Session (See the readme for more)","required": true},
+        "ENV": {"description": "Set this to ANYTHING","value": "ANYTHING"}
+  },
+  "buildpacks": [
+    {"url": "heroku/python"}
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
