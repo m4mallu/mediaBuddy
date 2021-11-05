@@ -21,7 +21,6 @@
     easily access the required media. Your perfect media buddy.
 
 </details>
-
 <details>
     <summary><b>Working</b></summary>
     <p align="left"></p>
@@ -32,7 +31,6 @@
         🔷 The output will be the file name with a hyper link to the original file.
         🔷 By clicking, you can easily migrate to the file location thus saves your valuable time in searching.
 </details>
-
 <details>
     <summary><b>What to do</b></summary>
     <p align="left"></p>
@@ -42,7 +40,6 @@
         🔷 Join some movie channels.
         🔷 Search movies inline.
 </details>
-
 <details>
     <summary><b>Mandatory Variables</b></summary>
     <p align="left"></p>
@@ -52,22 +49,22 @@
     🔷 BOT_TOKEN       -   Your bot token, get it from @BotFather
     🔷 TG_USER_SESSION -   Your session string (Generate for 'User', dont use any bot session)
 </details>
-
 <details>
     <summary><b>Generate User Session</b></summary>
     <p align="left"></p>
-    Click <a href="https://replit.com/@ayrahikari/pyrogram-session-maker"><b>HERE</b></a> to generate a user session string.
-        <ul>
-            <li>Open the above link and start the application.</li>
-            <li>Give your APP_ID, API_HASH - Get it from <a href="https://my.telegram.org/auth"><b>HERE</b></a> </li>
-            <li>On the next step, select <code>1 = User Bot</code> option .</li>
-            <li>Give your phone number in <a href="https://www.cm.com/blog/how-to-format-international-telephone-numbers/">international format</a> .</li>
-            <li>Give the OTP and Auth Phrase if any</li>
-            <li>This will get your long user session string</li>
-            <li><a href="https://docs.pyrogram.org/topics/storage-engines?highlight=string%20sessions#session-strings"><b>Keep the String safe, anyone can access your account using it.</b></a></li>
-        </ul>
+    <a href="https://replit.com/@ayrahikari/pyrogram-session-maker">
+        <img src="https://img.shields.io/badge/Generate-String%20Session-orange" height="30" />
+</a>
+    <ul>
+        <li>Open the above link and start the application.</li>
+        <li>Give your APP_ID, API_HASH - Get it from <a href="https://my.telegram.org/auth"><b>HERE</b></a> </li>
+        <li>On the next step, select <code>1 = User Bot</code> option .</li>
+        <li>Give your phone number in <a href="https://www.cm.com/blog/how-to-format-international-telephone-numbers/">international format</a> .</li>
+        <li>Give the OTP and Auth Phrase if any</li>
+        <li>This will get your long user session string</li>
+        <li><a href="https://docs.pyrogram.org/topics/storage-engines?highlight=string%20sessions#session-strings"><b>Keep the String safe, anyone can access your account using it.</b></a></li>
+    </ul>
 </details>
-
 <details>
     <summary><b>@BotFather Commands</b></summary>
     <p align="left">
@@ -77,9 +74,8 @@
     update - Add a chat to the list         Usage: /update -100xxxxxxxxxx
     delete - Remove chats from the list     Usage: /remove -100xxxxxxxxxx
 </details>
-
 <details>
-    <summary><b>Deploy Locally</b></summary>
+    <summary><b>Deploy in VPS</b></summary>
     <p align="left">
     <ul>
         <li>Create a <code>config.py</code> file with the Mandatory Variables mentioned above.</li>
@@ -96,7 +92,6 @@
     pip3 install -r requirements.txt
     python3 main.py
 </details>
-
 <details>
     <summary><b>Deploy Heroku</b></summary>
     <p align="left">
@@ -104,7 +99,6 @@
      <img height="30px" src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku">
   </a></p>
 </details>
-
 <details>
     <summary><b>Limitations</b></summary>
     <p align="left">
@@ -113,7 +107,6 @@
         <li>Chance for getting heavy FloodWaits in <code>searchMessages</code> in case of massive number of media chats.</li>
     </ul>
 </details>
-
 <details>
     <summary><b>Developer</b></summary>
     <p align="left">
@@ -122,14 +115,22 @@
                 <a href="https://t.me/rmprojects"><b>Update Channel</b></a>
     </p>
 </details>
-
+<details>
+    <summary><b>Donate</b></summary>
+    <p align="left"><br>
+    <b>Buy me a coffee for the work !</b><br>
+    <img src="https://telegra.ph/file/b926b7e8ea84826d81d8a.png" width="260px" style="max-width:100%;"/><br><br>
+      <a href="https://www.paypal.me/space4renjith" target="_blank">
+        <img src="https://img.shields.io/badge/Donate-Me-blueviolet?style=for-the-badge&logo=paypal">
+    </a>
+</p>
+</details>
 <details>
     <summary><b>Credits</b></summary>
     <p align="left">
         <a href="https://github.com/pyrogram/pyrogram"><b>Pyrogram</b></a>
     </p>
 </details>
-
 <details>
     <summary><b>Licence</b></summary>
     <p align="left">
@@ -138,8 +139,6 @@
         </a>
     </p>
 </details>
-<br>
-
 <p align="center">
     <a href="https://t.me/space4renjith">
         <img alt="GPL3" src ="https://telegra.ph/file/c4f778ccfc576a954dd20.gif" width="340" height="214"/>
