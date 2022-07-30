@@ -3,6 +3,7 @@ import sys
 from user import User
 from pyrogram import Client
 from presets import Presets as Msg
+from pyrogram.enums import ParseMode
 
 if bool(os.environ.get("ENV", False)):
     from sample_config import Config
@@ -10,8 +11,6 @@ if bool(os.environ.get("ENV", False)):
 else:
     from config import Config
     from config import LOGGER
-
-bot_user_name = []
 
 
 class Bot(Client):
@@ -34,14 +33,11 @@ class Bot(Client):
     async def start(self):
         await super().start()
         usr_bot_me = await self.get_me()
-        self.set_parse_mode("html")
+        self.set_parse_mode(ParseMode.HTML)
         self.LOGGER(__name__).info(
             f"@{usr_bot_me.username}  started! "
         )
         self.USER, self.USER_ID = await User().start()
-        #
-        bot_spec = await self.get_me()
-        bot_user_name.append('@' + str(bot_spec.username))
         #
         try:
             await self.USER.send_message(usr_bot_me.username, "/index")

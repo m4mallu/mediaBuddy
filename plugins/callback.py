@@ -56,3 +56,8 @@ async def help_delete_button(c: Bot, cb: CallbackQuery):
 async def help_view_button(c: Bot, cb: CallbackQuery):
     await cb.answer()
     await cb.message.edit(Presets.HELP_VIEW_TXT, reply_markup=back_button, disable_web_page_preview=True)
+
+
+@Bot.on_callback_query(filters.regex(r'^empty_chat_invite_link$'))
+async def chat_invite_link_error(c: Bot, cb: CallbackQuery):
+    await cb.answer(Presets.NO_CHAT_INVITE_LINK_MSG, True)

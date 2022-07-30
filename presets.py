@@ -9,15 +9,16 @@ class Presets(object):
     DEV_LINK = "https://t.me/space4renjith"
     DEV_THUMB_URL = "https://freepikpsd.com/media/2019/10/software-developer-icon-png-2-Transparent-Images.png"
     DEV_DESCRIPTION = "Name: Renjith Mangal | Telegram"
-    NOT_AUTH_TXT = "❌ ❌ You are not Authorized ❌ ❌"
+    NOT_AUTH_TXT = "❌ You are not Authorized ❌"
     SHARE_BUTTON_TEXT = "Hi  👋\nCheckout : @{username}\nFor searching your medias inline"
     RESULTS_TXT = "👀 Results: for - {}"
     NO_RESULTS = "❌ No Results: for - {}"
     BOT_BLOCKED_MSG = "Bot is blocked by the  session user ! Open the bot chat, then try again."
-    CHAT_LIST_TXT = "➡️ <a href='{}'><b>{}</b></a> - <b>{}</b>"
+    CHAT_LIST_TXT = "<a href='{}'><b>{}</b></a>"
+    NO_CHAT_INVITE_LINK_MSG = "⚠️ No chat invite link found"
     PROCESSING_TXT = "<b>⚙️ Processing ⚙️</b>"
     INVALID_CHAT_ID = "<b>Error:</b>\n\n<i>You are not a member of the chat id provided</i>"
-    NEW_CHAT_CNF_TXT = "<b>Success</b> ✅\n\n<i>New chat added to the master list.</i>\n\nName: {}\nType: {}"
+    NEW_CHAT_CNF_TXT = "<b>Success</b> ✅\n\n<i>New chat added to the master list.</i>\n\nName: {}"
     CHAT_DUPLICATED_TXT = "<b>Error:</b>\n\n<i>The chat is already in the master list. Update denied !</i>"
     INVALID_UPDATE = "<b>Error:</b>\n\n<i>Error in format. Try <b>HELP</b> for the command usage.</i>"
     FIND_ALL_CHATS_TXT = "<b>⚙️ Automated Message ⚙️</b>\n\n<code>Let's figure out the total groups and channels" \
@@ -27,11 +28,12 @@ class Presets(object):
     CHAT_DELETE_TXT = "<b>Success</b> ✅\n\n<i>Chat id <code>{}</code>\nHas been removed from the master list</i>"
     CHAT_NOT_EXIST_TXT = "<b>Error:</b>\n\n<i>Chat id: <code>{}</code>\nDoes not exists in the master list</i>"
     CHAT_LIST_AUTO_1 = "<b><u>Your current groups and channels:</u></b>\n\n{}"
-    CHAT_LIST_AUTO_2 = "<b>Your current media chats:</b>\n\n{}\n\n<i>know more about me, click</i>" \
-                       "<a href='t.me/{}?start={}'><b> 👉 HERE 👈</b></a>"
-    FILE_LINK_TXT = "<b>Click on the file name:</b>\n\n<a href='https://t.me/c/{}/{}'><b>{}</b></a> | {}\n\n" \
-                    "<b>Credits:</b><a href='https://github.com/m4mallu/mediaBuddy'><b> @M4Mallu</b></a>" \
-                    "\xad    \xad||\xad    \xad<a href='t.me/{}?start={}'><b>HELP</b></a>"
+    CHAT_LIST_AUTO_2 = "<b>Your current media chats:</b>\n\xad                                                       " \
+                       "             \xad\n{} "
+    FILE_LINK_TXT = "<b>File name -</b> <i>{}</i>\n\xad                                                              " \
+                    "\xad\n<b>Size -</b> <i>{}</i> "
+    INLINE_RESULT_MARKUP = "https://t.me/c/{}/{}"
+    INLINE_RESULT_TITLE = "{}\nSize- {}"
     INLINE_THUMB_URL = "https://telegra.ph/file/6313edecd73bf2c38dd47.png"
     INLINE_DESCRIPTION = "| {} | {} |"
     HELP_HEADER_TXT = "<b>These are my available options:</b>"

@@ -1,5 +1,6 @@
 import os
 from pyrogram import Client
+from pyrogram.enums import ParseMode
 
 if os.environ.get("ENV", False):
     from sample_config import Config
@@ -11,19 +12,20 @@ else:
 class User(Client):
     def __init__(self):
         super().__init__(
-            Config.TG_USER_SESSION,
+            name='user_session',
+            session_string=Config.TG_USER_SESSION,
             api_hash=Config.API_HASH,
             api_id=Config.APP_ID,
-            workers=4
+            workers=8
         )
         self.LOGGER = LOGGER
 
     async def start(self):
         await super().start()
         usr_bot_me = await self.get_me()
-        self.set_parse_mode("html")
+        self.set_parse_mode(ParseMode.HTML)
         self.LOGGER(__name__).info(
-            f"@{usr_bot_me.username}  started ! and you have a message in your bot !"
+            f"@{usr_bot_me.username}  started !"
         )
         return self, usr_bot_me.id
 
