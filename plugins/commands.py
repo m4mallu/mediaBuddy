@@ -6,9 +6,9 @@ from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 from suport.buttons import start_button, close_with_inline
 
-final_chat_list = []        # Chat list of session user having media content only (Master list)
-admin_user_id = []          # User id of admin to be shared
-chat_invite_url = {}        # Dict to store chat invite url of media chats
+final_chat_list = []  # Chat list of session user having media content only (Master list)
+admin_user_id = []  # User id of admin to be shared
+chat_invite_url = {}  # Dict to store chat invite url of media chats
 
 
 @Bot.on_message(filters.private & filters.command('start'))
@@ -31,9 +31,9 @@ async def index_media_chats(c: Bot, m: Message):
     ANY ALTERNATE WAY TO STORE THE CHAT IDS INITIALLY.
     """
     #
-    chat_list = []                  # A chat id list with user's groups and channels
-    chat_ids_all = []               # A mentioned name lts with the above chat ids
-    chat_ids_media = []             # A mentioned name list with the chats of having media only.
+    chat_list = []  # A chat id list with user's groups and channels
+    chat_ids_all = []  # A mentioned name lts with the above chat ids
+    chat_ids_media = []  # A mentioned name list with the chats of having media only.
     chat_details_all = str()
     chat_details_media = str()
     number_count = int()
@@ -189,11 +189,14 @@ async def view_media_chat(c: Bot, m: Message):
     )
 
 
-""" function get the chat invite link from the chat id """
-async def get_chat_link(c, chat_id):
-    try:
-        chat = await c.USER.get_chat(chat_id)
-        return chat.invite_link
-    except Exception as e:
-        print(e)
-        return ''
+""" function to generate a chat invite link (private/public)"""
+async def generate_chat_link(chat_username, chat_id):
+    link = str()
+    if chat_username is not None:
+        link = f'https://t.me/{chat_username}'
+    elif f'{chat_id}' in chat_invite_url:
+        link = chat_invite_url[f'{chat_id}']
+    else:
+        link = "no_chat_invite_link"
+    print(link)
+    return link

@@ -4,7 +4,7 @@ from presets import Presets
 from suport.preload import get_dev_info
 from humanize import naturalsize as size
 from suport.support import get_chat, get_reply_markup
-from plugins.commands import admin_user_id, chat_invite_url
+from plugins.commands import admin_user_id, generate_chat_link
 from pyrogram.types import InlineQuery, InputTextMessageContent, InlineQueryResultArticle
 
 defaults = []
@@ -33,12 +33,13 @@ async def inline_search(c: Bot, query: InlineQuery):
     if results:
         for result in results:
             #
-            file_name = result.document.file_name                       # Name of the document
-            file_size = size(result.document.file_size)                 # Size of the document
-            chat_url = str(result.chat.id).replace("-100", "")          # Link to the chat
-            chat_title = result.chat.title                              # Title of the chat
-            message_link = result.id                                    # Link to the message
-            chat_id = result.chat.id                                    # Chat id of the message
+            file_name = result.document.file_name                                   # Name of the document
+            file_size = size(result.document.file_size)                             # Size of the document
+            chat_url = str(result.chat.id).replace("-100", "")                      # Chat id of the document
+            chat_title = result.chat.title                                          # Title of the chat
+            message_id = result.id                                                  # id of the message
+            chat_id = result.chat.id                                                # Chat id of the message
+            chat_username = result.chat.username if result.chat.username else None  # Username of the chat
             #
             inline_results.append(
                 InlineQueryResultArticle(
@@ -61,11 +62,11 @@ async def inline_search(c: Bot, query: InlineQuery):
                         file_name,
                         file_size,
                         chat_url,
-                        message_link,
-                        chat_invite_url[f'{chat_id}'] if (f'{chat_id}' in chat_invite_url) else "no_chat_invite_link"
+                        message_id,
+                        await generate_chat_link(chat_username, chat_id),
                     )
                 )
-            )
+            ) 
     #
     if results:
         text = Presets.RESULTS_TXT.format(query.query)
