@@ -52,13 +52,12 @@
 <details>
     <summary><b>Generate User Session</b></summary>
     <p align="left"></p>
-    <a href="https://replit.com/@ayrahikari/pyrogram-session-maker">
+    <a href="https://replit.com/@m4mallu/Pyrogram-V2-SessionStringMaker">
         <img src="https://img.shields.io/badge/Generate-String%20Session-orange" height="30" />
 </a>
     <ul>
         <li>Open the above link and start the application.</li>
         <li>Give your APP_ID, API_HASH - Get it from <a href="https://my.telegram.org/auth"><b>HERE</b></a> </li>
-        <li>On the next step, select <code>1 = User Bot</code> option .</li>
         <li>Give your phone number in <a href="https://www.cm.com/blog/how-to-format-international-telephone-numbers/">international format</a> .</li>
         <li>Give the OTP and Auth Phrase if any</li>
         <li>This will get your long user session string</li>
